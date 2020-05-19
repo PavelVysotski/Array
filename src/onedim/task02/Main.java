@@ -33,7 +33,6 @@ public class Main {
 
     public static int changeArray(double array[], double z) {
         int count = 0;
-        Scanner input = new Scanner(System.in);
         System.out.println("Массив после замены.");
         for ( int i = 0; i < array.length; i++ ) {
             if (array[i] > z) {
