@@ -16,7 +16,6 @@ public class Main {
         int a = input.nextInt();
         int b = input.nextInt();
         double[] array = new double[n];
-
         System.out.println("Введите число для замены: ");
         double z = input.nextDouble();
 
@@ -27,7 +26,7 @@ public class Main {
     public static void createArray(double array[], int a, int b) {
         for ( int i = 0; i < array.length; i++ ) {
             array[i] = (Math.random() * (b - a)) + a;
-            System.out.printf("[" + i + "]: " + array[i] + ", ");
+            System.out.print("[" + i + "]: " + array[i] + ", ");
         }
         System.out.println();
     }
