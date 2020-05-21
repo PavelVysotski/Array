@@ -31,7 +31,7 @@ public class Main {
     public static double[] createNewArray(double[] array) {
         double[] array2 = new double[array.length / 2];
         for ( int i = 0; i < array2.length; i++ ) {
-            array2[i] = array[i] + array[i + 1];
+            array2[i] = array[i] + array[array.length-1-i];
             System.out.print("[" + i + "]: " + array2[i] + ", ");
         }
         System.out.println();
