@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Main {
     /*
     В числовой матрице поменять местами два любых столбца, т. е. все элементы одного столбца поставить
-    на соответствующие им позиции другого, а его элементы второго переместить в первый. Номера столбцов вводит
-    пользователь с клавиатуры.
+    на соответствующие им позиции другого. Номера столбцов вводит пользователь с клавиатуры.
     */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -19,12 +18,13 @@ public class Main {
         int a = input.nextInt();
         int b = input.nextInt();
 
-        createArray(array, a,b);
+        createArray(array, a, b);
         columnReplace(array, m);
+        showArray(array);
 
     }
 
-    public static void columnReplace(int[][] array, int m) {
+    public static int[][] columnReplace(int[][] array, int m) {
         Scanner input = new Scanner(System.in);
         System.out.println("Введите номера столбцов, которые необходимо переставить: ");
         int colum1 = input.nextInt();
@@ -35,13 +35,9 @@ public class Main {
             array[i][colum1 - 1] = array[i][colum2 - 1];
             array[i][colum2 - 1] = repl;
         }
-        for ( int i = 0; i < array.length; i++ ) {
-            for ( int j = 0; j < array[i].length; j++ ) {
-                System.out.print(array[i][j] + "\t");
-            }
-            System.out.println();
-        }
+        return array;
     }
+
     public static int[][] createArray(int[][] array, int a, int b) {
         for ( int i = 0; i < array.length; i++ ) {
             for ( int j = 0; j < array[i].length; j++ ) {
@@ -52,5 +48,14 @@ public class Main {
         }
         System.out.println();
         return array;
+    }
+
+    public static void showArray(int[][] array) {
+        for ( int i = 0; i < array.length; i++ ) {
+            for ( int j = 0; j < array[i].length; j++ ) {
+                System.out.print(array[i][j] + "\t");
+            }
+            System.out.println();
+        }
     }
 }
