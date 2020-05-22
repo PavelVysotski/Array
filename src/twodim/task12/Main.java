@@ -6,11 +6,12 @@ public class Main {
     */
     public static void main(String[] args) {
 
-showArray(sortToMax(createArray()));
+        showArray(sortToMax(createArray()));
         System.out.println();
-showArray(sortToMin(createArray()));
+        showArray(sortToMin(createArray()));
     }
-    public static int[][] createArray (){
+
+    public static int[][] createArray() {
         int[][] array = new int[5][7];
         for ( int i = 0; i < array.length; i++ ) {
             for ( int j = 0; j < array[i].length; j++ ) {
@@ -22,12 +23,18 @@ showArray(sortToMin(createArray()));
         System.out.println();
         return array;
     }
-    public static int[][] sortToMax (int[][] array){
+
+    public static int[][] sortToMax(int[][] array) {
+        boolean sort;
+        int temp = 0;
         for ( int i = 0; i < array.length; i++ ) {
-            for ( int k = 0; k < array.length; k++ ) {
+            sort = false;
+            while (!sort) {
+                sort = true;
                 for ( int j = 0; j < array[i].length - 1; j++ ) {
                     if (array[i][j] > array[i][j + 1]) {
-                        int temp = array[i][j];
+                        sort = false;
+                        temp = array[i][j];
                         array[i][j] = array[i][j + 1];
                         array[i][j + 1] = temp;
                     }
@@ -36,12 +43,18 @@ showArray(sortToMin(createArray()));
         }
         return array;
     }
-    public static int[][] sortToMin (int[][] array){
+
+    public static int[][] sortToMin(int[][] array) {
+        boolean sort;
+        int temp = 0;
         for ( int i = 0; i < array.length; i++ ) {
-            for ( int k = 0; k < array.length; k++ ) {
+            sort = false;
+            while (!sort) {
+                sort = true;
                 for ( int j = 0; j < array[i].length - 1; j++ ) {
                     if (array[i][j] < array[i][j + 1]) {
-                        int temp = array[i][j];
+                        sort = false;
+                        temp = array[i][j];
                         array[i][j] = array[i][j + 1];
                         array[i][j + 1] = temp;
                     }
@@ -50,7 +63,8 @@ showArray(sortToMin(createArray()));
         }
         return array;
     }
-    public static void showArray (int[][] array){
+
+    public static void showArray(int[][] array) {
         for ( int i = 0; i < array.length; i++ ) {
             for ( int j = 0; j < array[i].length; j++ ) {
                 System.out.print(array[i][j] + "\t");
