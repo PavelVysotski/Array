@@ -5,7 +5,6 @@ public class Main {
     Отсотрировать столбцы матрицы по возрастанию и убыванию значений элементов.
     */
     public static void main(String[] args) {
-
         int string = 4;
         int column = 7;
         int[][] array = new int[string][column];
