@@ -1,14 +1,16 @@
-package twodim.task04;
+package twodim.task05;
 
 import java.util.Scanner;
 
 public class Main {
-    /* Сформировать квадратную матрицу порядка n по заданному образцу(n - четное)
-    1  2   3  ... n
-    n n-1 n-2 ... 1
-    1  2   3  ... n
-    ...............
-    n n-1 n-2 ... 1
+    /*
+    Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
+    1    1    1 .. 1  1  1
+    2    2    2 .. 2  2  0
+    3    3    3 .. 3  0  0
+    ......................
+    n-1 n-1   0 .. 0  0  0
+    n    0    0 .. 0  0  0
     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -20,13 +22,9 @@ public class Main {
         }
         int[][] array = new int[n][n];
 
-        for ( int i = 0; i < n; i++ ) {
-            for ( int j = 0; j < n; j++ ) {
-                if (i % 2 == 0) {
-                    array[i][j] = j + 1;
-                } else {
-                    array[i][j] = n - j;
-                }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i; j++) {
+                array[i][j] = i + 1;
             }
         }
         for ( int i = 0; i < array.length; i++ ) {
