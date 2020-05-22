@@ -28,7 +28,7 @@ public class Main {
         createArray(array, a, b);
         sumAllColumn(array, m, n);
     }
-    
+
     public static int[][] createArray(int[][] array, int a, int b) {
         for ( int i = 0; i < array.length; i++ ) {
             for ( int j = 0; j < array[i].length; j++ ) {
@@ -54,6 +54,6 @@ public class Main {
                 sumMax = sumColumn;
             }
         }
-        System.out.println("Максимальная сумма из столбцов: " + sumMax);
+        System.out.println("Максимальная сумма столбцов: " + sumMax);
     }
 }

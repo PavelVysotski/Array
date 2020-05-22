@@ -14,10 +14,10 @@ public class Main {
     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите четное n не менее 2: ");
+        System.out.println("Введите n не менее 2: ");
         int n = scanner.nextInt();
-        while ((n % 2) != 0 || n < 2) {
-            System.out.println("n должно быть четное и не меньше 2: ");
+        while (n < 2) {
+            System.out.println("n должно быть не меньше 2: ");
             n = scanner.nextInt();
         }
         int[][] array = new int[n][n];
