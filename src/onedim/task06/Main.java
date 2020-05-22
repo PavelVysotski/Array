@@ -24,7 +24,7 @@ public class Main {
     public static double[] createArray(double[] array, int a, int b) {
         for ( int i = 0; i < array.length; i++ ) {
             array[i] = (Math.random() * (b - a) + a);
-            System.out.print("[" + i + "]: " + array[i] + ", ");
+            System.out.printf("%10.3f", array[i]);
         }
         System.out.println();
         return array;

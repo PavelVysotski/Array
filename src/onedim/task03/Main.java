@@ -21,7 +21,7 @@ public class Main {
 
         for ( int i = 0; i < array.length; i++ ) {
             array[i] = (Math.random() * (b - a)) + a;
-            System.out.print("[" + i + "]: " + array[i] + ", ");
+            System.out.printf("%10.3f", array[i]);
             if (array[i] < 0) {
                 minus++;
             }

@@ -26,7 +26,7 @@ public class Main {
     public static void createArray(double array[], int a, int b) {
         for ( int i = 0; i < array.length; i++ ) {
             array[i] = (Math.random() * (b - a)) + a;
-            System.out.print("[" + i + "]: " + array[i] + ", ");
+            System.out.printf("%10.3f", array[i]);
         }
         System.out.println();
     }
@@ -39,7 +39,7 @@ public class Main {
                 array[i] = z;
                 count++;
             }
-            System.out.print("[" + i + "]: " + array[i] + ", ");
+            System.out.printf("%10.3f", array[i]);
         }
         System.out.println();
         System.out.println("Количество замен равно: " + count);

@@ -22,7 +22,7 @@ public class Main {
     public static double[] createArray(double[] array, int a, int b) {
         for ( int i = 0; i < array.length; i++ ) {
             array[i] = (Math.random() * (b - a) + a);
-            System.out.print("[" + i + "]: " + array[i] + ", ");
+            System.out.printf("%10.3f", array[i]);
         }
         System.out.println();
         return array;
@@ -32,7 +32,7 @@ public class Main {
         double[] array2 = new double[array.length / 2];
         for ( int i = 0; i < array2.length; i++ ) {
             array2[i] = array[i] + array[array.length-1-i];
-            System.out.print("[" + i + "]: " + array2[i] + ", ");
+            System.out.printf("%10.3f", array[i]);
         }
         System.out.println();
         return array2;
