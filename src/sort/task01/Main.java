@@ -1,6 +1,5 @@
 package sort.task01;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -10,24 +9,21 @@ public class Main {
     дополнительный массив.
     */
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
-
-        System.out.print("Введите размер массива, в который будем вставлять второй массив: ");
+        System.out.print("Введите размер первого массива, в который будем вставлять второй массив: ");
         int m = input.nextInt();
-        System.out.print("Введите размер массива, который будем вставлять в первый массив: ");
+        System.out.print("Введите размер второго массива, который будем вставлять в первый массив: ");
         int n = input.nextInt();
-
         int[] array1 = new int[n + m];
         int[] array2 = new int[n];
 
         for ( int i = 0; i < m; i++ ) {
-            array1[i] = (int) Math.round(Math.random() * 15 + 0);
+            array1[i] = (int) (Math.random() * 15);
             System.out.print(array1[i] + " ");
         }
         System.out.println();
         for ( int i = 0; i < n; i++ ) {
-            array2[i] = (int) Math.round(Math.random() * 15 + 0);
+            array2[i] = (int) (Math.random() * 15);
             System.out.print(array2[i] + " ");
         }
         System.out.println();
@@ -35,7 +31,7 @@ public class Main {
         System.out.print("Введите номер элемента, начиная с которого будет вставлен второй массив в первый: ");
         int k = input.nextInt();
         while (k < 0 || k > m) {
-            System.out.println("номер не может быть отрицательным, или выходить за пределы размера первого массива: ");
+            System.out.println("Номер не может быть отрицательным, или выходить за пределы размера первого массива: ");
             k = input.nextInt();
         }
 
