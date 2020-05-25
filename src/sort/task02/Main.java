@@ -58,7 +58,7 @@ public class Main {
         for ( int i = 0; i < n; i++ ) {
             array1[m + i] = array2[i];
         }
-//Сортируем объединенный массив по возрастанию         
+//Сортируем объединенный массив по возрастанию
         sort=false;
         while (!sort) {
             sort = true;
