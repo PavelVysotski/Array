@@ -6,8 +6,8 @@ public class Main {
     знаменателю и упорядочивает их в порядке возрастания.
     */
     public static void main(String[] args) {
-        int[] array1 = { 3, 6, 2, 8, 4, 2, 9, 13, 28 };
-        int[] array2 = { 4, 2, 7, 7, 6, 2, 7, 3, 14 };
+        int[] array1 = { 3, 6, 2, 5, 3, 1, 9, 3, 5 };
+        int[] array2 = { 4, 13, 7, 8, 4, 2, 7, 13, 14 };
         int NOK = array2[0];
 
         for (int i = 1; i < array2.length; i++) {
