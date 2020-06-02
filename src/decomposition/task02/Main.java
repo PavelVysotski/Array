@@ -5,10 +5,10 @@ public class Main {
     Написать метод(методы) для нахождения наибольшего общего делителя четырех натуральных чисел.
     */
     public static void main(String[] args) {
-        int a1 = 2;
-        int a2 = 3;
+        int a1 = 8;
+        int a2 = 6;
         int a3 = 10;
-        int a4 = 5;
+        int a4 = 14;
         System.out.println(NOD4(a1, a2, a3, a4));
     }
 
