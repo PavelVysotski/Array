@@ -1,5 +1,7 @@
 package decomposition.task16;
 
+import java.util.Scanner;
+
 public class Main {
     /*
     Написать программу, определяющую сумму n - значных чисел, содержащих только нечетные цифры.
