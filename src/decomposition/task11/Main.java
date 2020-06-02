@@ -23,8 +23,8 @@ public class Main {
 
     public static int lengthNumber(int num) {
         num = Math.abs(num);
-        int count = 1;
-        while (num > 9) {
+        int count = 0;
+        while (num > 0) {
             count++;
             num = num / 10;
         }

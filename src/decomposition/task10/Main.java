@@ -6,7 +6,7 @@ public class Main {
     являются цифры числа N.
     */
     public static void main(String[] args) {
-        long n = -11998845004644l;
+        long n = -91998845004644l;
 
         long[] array = toArray(n);
 
@@ -18,9 +18,9 @@ public class Main {
     public static long[] toArray(long n) {
         n = Math.abs(n);
         long copy = n;
-        int length = 1;
+        int length = 0;
 
-        while (n > 9) {
+        while (n > 0) {
             n = n / 10;
             length++;
         }
